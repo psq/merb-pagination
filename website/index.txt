@@ -77,7 +77,7 @@ h2. Demonstration of usage
 Example:
 <pre><%%%= paginate(@current_page, @page_count, :inner_window => 5) %%></pre>
 
-h2. Forum
+h2. Google Groups / Mailing List
 
 "http://groups.google.com/group/merb-pagination":http://groups.google.com/group/merb-pagination
 
@@ -102,5 +102,5 @@ This code is free to use under the terms of the "MIT license":http://merb-pagina
 
 h2. Contact
 
-Comments are welcome, and can be sent via the "forum":http://groups.google.com/group/merb_pagination
+Comments are welcome, and can be sent via "Google Groups":http://groups.google.com/group/merb-pagination
 
