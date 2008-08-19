@@ -1,0 +1,5 @@
+
+For more information on merb_pagination, see:
+ http://projects.loriholden.com/wiki/merb_pagination
+
+
