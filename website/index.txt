@@ -6,7 +6,7 @@ A pagination helper for merb. Useful with dm-is-paginated
 
 h2. Installing
 
-<pre syntax="ruby">sudo gem install merb-pagination</pre>
+<pre>sudo gem install merb-pagination</pre>
 
 h2. The basics
 
