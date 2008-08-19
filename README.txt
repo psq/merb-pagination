@@ -1,6 +1,6 @@
 = merb_pagination
 
-* http://projects.loriholden.com/wiki/merb_pagination
+* http://merb-pagination.rubyforge.org
 
 == DESCRIPTION:
 
