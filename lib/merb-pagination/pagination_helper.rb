@@ -50,8 +50,8 @@ module Merb
     def paginate(current_page, page_count, options = {})
       options.reverse_merge!({
         :class           => 'paginated',
-        :prev_label      => '&laquo; Previous ',
-        :next_label      => ' Next &raquo;',
+        :prev_label      => '&laquo; Previous',
+        :next_label      => 'Next &raquo;',
         :left_cut_label  => '&larr;',
         :right_cut_label => '&rarr;',
         :outer_window    => 2,
@@ -104,9 +104,12 @@ module Merb
             padding: 2px;
           }  
         } } if options[:default_css]
-        b << (current_page <= 1 ? options[:prev_label] : %Q{<a href="#{url}=#{current_page -1}">#{options[:prev_label]}</a>})
+        # b << (current_page <= 1 ? options[:prev_label] : %Q{<a href="#{url}=#{current_page -1}">#{options[:prev_label]}</a>})
         
         b.ul do
+          b.li(:class => current_page <= 1 ? 'previous-off' : 'previous') {
+            b << (current_page <= 1 ? options[:prev_label] : %Q{<a href="#{url}=#{current_page -1}">#{options[:prev_label]}</a>})
+          }
           [pages[:left], pages[:center], pages[:right]].each do |p|
             p.each do |page_number|
               case page_number
@@ -119,9 +122,12 @@ module Merb
               end
             end
           end
+          b.li(:class => current_page >= page_count ? 'next-off' : 'next') {
+            b << (current_page >= page_count ? options[:next_label] : %Q{<a href="#{url}=#{current_page +1}">#{options[:next_label]}</a>})
+          }
         end
         
-        b << (current_page >= page_count ? options[:next_label] : %Q{<a href="#{url}=#{current_page +1}">#{options[:next_label]}</a>})
+        # b << (current_page >= page_count ? options[:next_label] : %Q{<a href="#{url}=#{current_page +1}">#{options[:next_label]}</a>})
       end
     end
     private
